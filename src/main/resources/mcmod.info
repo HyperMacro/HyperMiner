@@ -1,0 +1,16 @@
+[
+{
+  "modid": "hyperminer",
+  "name": "Hyper Miner",
+  "description": "Best miner!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["h"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

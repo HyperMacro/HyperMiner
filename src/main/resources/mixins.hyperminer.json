@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.hyperclient.HyperMiner.mixins",
+  "refmap": "mixins.hyperminer.refmap.json",
+  "mixins": [
+    "network.MixinNetworkManager"
+  ],
+  "client": [
+    "client.MixinMinecraft"
+  ]
+}
