@@ -1,9 +1,11 @@
 
 plugins {
-    id "net.minecraftforge.gradle.forge" version "8708bf3e0"
-    id "com.github.johnrengelman.shadow" version "6.1.0"
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
     id "org.spongepowered.mixin" version "d5f9873"
     id "java"
+    id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 
 version = "v0.1"
@@ -15,7 +17,7 @@ compileJava.options.encoding = 'UTF-8'
 
 sourceSets {
     main {
-        ext.refMap = "mixins.mightyminer.refmap.json"
+        ext.refMap = "mixins.hyperminer.refmap.json"
         output.resourcesDir = file("${buildDir}/classes/java/main")
     }
 }
@@ -26,7 +28,7 @@ minecraft {
     mappings = "stable_22"
     makeObfSourceJar = false
 
-    clientRunArgs += "--mixin mixins.mightyminer.json"
+    clientRunArgs += "--mixin mixins.hyperminer.json"
     clientRunArgs += '--tweakClass gg.essential.loader.stage0.EssentialSetupTweaker'
 }
 
@@ -66,7 +68,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, "mixins.mightyminer.refmap.json"
+    add sourceSets.main, "mixins.hyperminer.refmap.json"
     defaultObfuscationEnv searge
 }
 
@@ -76,7 +78,7 @@ jar {
             'ModSide': 'CLIENT',
             "TweakClass": "gg.essential.loader.stage0.EssentialSetupTweaker",
             "TweakOrder": "0",
-            'MixinConfigs': "mixins.mightyminer.json",
+            'MixinConfigs': "mixins.hyperminer.json",
     )
     enabled = false
 }
